@@ -1,0 +1,114 @@
+body {
+    font-family: roboto, 'Noto Sans Myanmar UI', arial, sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    #login-app {
+        width: 436px !important;
+        margin: auto !important;
+        margin-top: 50px !important;
+		height: 500px !important;
+        padding-top: 30px !important;
+        padding-bottom: 40px !important;
+    }
+}
+
+@media (max-width: 767px){
+  #login-app {
+    border: 1px solid #fff;
+  }
+}
+
+#login-app {
+    padding: 10px;
+    padding-top; 24px;
+    margin-top: 0px;
+    border: 1px solid rgb(217, 220, 222);
+    border-radius: 8px;
+	height: 80%;
+	position: relative;
+	height: 100%;
+}
+
+#g-logo {
+    margin: 0 auto;
+    width: 75px;
+}
+
+.g-h1 {
+    padding-top: 15px;
+}
+
+.g-h1, .g-h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.g-h2 {
+    font-size: 16px;
+}
+
+#email-form-step {
+    margin-top: 50px !important;
+}
+
+.g-input {
+    border-radius: 4px;
+    padding: 13px 15px;
+    border: 1px solid rgb(218, 220, 222);
+    width: 100%;
+    font-weight: 400;
+    height: 52px !important;
+}
+
+.g-input:focus {
+    outline: none !important;
+    border: 2px solid #1a73e8;
+    transition-timing-function: ease;
+}
+
+.g-fake-link {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1a73e8;
+    margin-top: 25px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+#private-window-info {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    margin-top: 32px;
+}
+
+.g-btn-primary {
+    min-width: 88px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #1a73e8;
+    color: #fff;
+    border-style: solid;
+    font-size: .875rem;
+    font-weight: 600;
+    letter-spacing: .25px;
+}
+
+.g-btn-primary:hover {
+    background-color: #4285f4;
+    transition: 0.2s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease;
+}
+
+.password-input {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.g-input:required {
+	box-shadow: none;
+}
