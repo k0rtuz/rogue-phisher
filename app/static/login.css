@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 24px;
+}
+
+form {
+    color: var(--bs-gray);
+}
+
+div.container-sm {
+    width: 436px !important;
+    padding-top: 30px !important;
+    padding-bottom: 40px !important;
+}
+
+.btn-submit {
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.btn-submit:hover {
+    background-color: #90ce00;
+    border: 1px solid #70ac00;
+    color: #1a2732;
+}

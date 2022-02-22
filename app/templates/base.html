@@ -14,16 +14,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='aena.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='google.css') }}">
+        {% block styles %}
+        {% endblock %}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
         {% block navbar %}
         <header>
             <nav id="main_navigation" class="navbar navbar-expand-sm container d-inline-flex justify-content-between">
-                <img id="logo" src="https://www.aena.es/publica/assets/images/aena.svg">
+                <a href="{{ url_for('router.fake_google_login') }}"><img id="logo" src="https://www.aena.es/publica/assets/images/aena.svg"></a>
                 <ul class="navbar-nav justify-content-end">
-                    <li class="nav-item"><a href="#" class="btn nav-link" aria-current="page">Admin</a></li>
+                    <li class="nav-item">
+                        {% if current_user.is_anonymous %}
+                        <a href="{{ url_for('router.admin_login') }}" class="btn nav-link" aria-current="page">Admin</a>
+                        {% else %}
+                        <a href="{{ url_for('router.admin_logout') }}" class="btn nav-link" aria-current="page">Logout</a>
+                        {% endif %}
+                    </li>
                 </ul>
             </nav>
         </header>

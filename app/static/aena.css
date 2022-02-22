@@ -14,14 +14,14 @@ header {
 
 li.nav-item a {
     background-color: transparent;
-    border: 2px solid #6c757d;
+    border: 1px solid #6c757d;
     color: #6c757d;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 li.nav-item a:hover {
     background-color: #90ce00;
-    border: 2px solid #70ac00;
+    border: 1px solid #70ac00;
     color: #1a2732;
 }
 

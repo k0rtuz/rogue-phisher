@@ -1,8 +1,8 @@
-"""first tables
+"""Initial commit
 
-Revision ID: 4d82b8444a7c
+Revision ID: 7fd581519456
 Revises: 
-Create Date: 2022-02-22 03:34:18.183459
+Create Date: 2022-02-22 17:31:17.335201
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '4d82b8444a7c'
+revision = '7fd581519456'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -21,7 +21,7 @@ def upgrade():
     op.create_table('google_login',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('email_or_phone', sa.String(length=120), nullable=True),
-    sa.Column('password_hash', sa.String(length=128), nullable=True),
+    sa.Column('password', sa.String(length=128), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_google_login_email_or_phone'), 'google_login', ['email_or_phone'], unique=True)
